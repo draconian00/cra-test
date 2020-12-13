@@ -4,7 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// core-js polyfills
 import 'core-js/features/string/pad-start';
+
+window.App = App;
 
 ReactDOM.render(
   <React.StrictMode>
