@@ -1,7 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button';
 
-function App() {
+import { stringPadStart } from './util';
+
+function App(props) {  
+  /* data */
+  const tt = stringPadStart('test', 10, '0');
+  const buttonStyle = {
+    marginLeft: 100,
+    display: 'flex',
+    alignItems: 'center',
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,8 +26,13 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React -- ttt
+          Learn React -- ttt { props.mainLabel }
         </a>
+        <p>{ tt }</p>
+        <Button
+          buttonStyle={ buttonStyle }
+          label="button test"
+        />
       </header>
     </div>
   );
